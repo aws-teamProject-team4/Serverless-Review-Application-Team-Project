@@ -1,0 +1,28 @@
+^E:\DOWNLORD\CODING\GITHUB\SERVERLESS-REVIEW-APPLICATION-TEAM-PROJECT\FRONT\BUILD\WINDOWS\CMAKEFILES\55E584E6E13FDB3980A903AC31A82CEC\FLUTTER_WINDOWS.DLL.RULE
+setlocal
+D:\Program\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -E env FLUTTER_ROOT=C:\Users\kirit\flutter PROJECT_DIR=E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front FLUTTER_ROOT=C:\Users\kirit\flutter FLUTTER_EPHEMERAL_DIR=E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral PROJECT_DIR=E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front FLUTTER_TARGET=E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\lib\main.dart DART_DEFINES=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz1mYWxzZQ==,RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ==,RkxVVFRFUl9XRUJfQ0FOVkFTS0lUX1VSTD1odHRwczovL3d3dy5nc3RhdGljLmNvbS9mbHV0dGVyLWNhbnZhc2tpdC9kYjIzYzNmYmUwYjAzMDFmNDYwNzE0MjkxYTNlNWZkYTUwZDZlMzQ5Lw== DART_OBFUSCATION=false TRACK_WIDGET_CREATION=true TREE_SHAKE_ICONS=false PACKAGE_CONFIG=E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\.dart_tool\package_config.json C:/Users/kirit/flutter/packages/flutter_tools/bin/tool_backend.bat windows-x64 Debug
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOWNLORD\CODING\GITHUB\SERVERLESS-REVIEW-APPLICATION-TEAM-PROJECT\FRONT\BUILD\WINDOWS\CMAKEFILES\EAB756D678349CD6CB7F0C4D1EF35DF1\FLUTTER_ASSEMBLE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\DOWNLORD\CODING\GITHUB\SERVERLESS-REVIEW-APPLICATION-TEAM-PROJECT\FRONT\WINDOWS\FLUTTER\CMAKELISTS.TXT
+setlocal
+D:\Program\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe -SE:/Downlord/Coding/GitHub/Serverless-Review-Application-Team-Project/front/windows -BE:/Downlord/Coding/GitHub/Serverless-Review-Application-Team-Project/front/build/windows --check-stamp-file E:/Downlord/Coding/GitHub/Serverless-Review-Application-Team-Project/front/build/windows/flutter/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

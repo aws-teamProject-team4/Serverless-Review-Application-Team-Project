@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-copyfile.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\44ee69130319edb111a54cd4c34b6aaa\nuget-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\6c6d63893a7eec5764daf3f43d859db7\nuget-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\21825c9ee17efd6983aa37b33ee0b101\nuget-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\_deps\nuget-subbuild\CMakeFiles\nuget-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{8F8B1A04-3741-3AF9-922E-307055E53CFF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\build\windows\CMakeFiles\142924dcad3e4521ed56bc1d1e6e9613\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{68D9BF1C-FFAE-3C07-8F58-B1773C01D1C5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

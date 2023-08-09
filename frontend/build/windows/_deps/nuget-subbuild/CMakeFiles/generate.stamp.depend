@@ -1,0 +1,13 @@
+# CMake generation dependency list for this directory.
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/ExternalProject-download.cmake.in
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/ExternalProject.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+D:/Program/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.22/Modules/RepositoryInfo.txt.in
+E:/Downlord/Coding/GitHub/Serverless-Review-Application-Team-Project/front/build/windows/_deps/nuget-subbuild/CMakeFiles/3.22.22022201-MSVC_2/CMakeSystem.cmake
+E:/Downlord/Coding/GitHub/Serverless-Review-Application-Team-Project/front/build/windows/_deps/nuget-subbuild/CMakeLists.txt
+E:/Downlord/Coding/GitHub/Serverless-Review-Application-Team-Project/front/build/windows/_deps/nuget-subbuild/nuget-populate-prefix/tmp/nuget-populate-cfgcmd.txt.in

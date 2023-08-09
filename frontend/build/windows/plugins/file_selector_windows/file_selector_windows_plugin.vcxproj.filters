@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\file_selector_windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\file_dialog_controller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\file_selector_plugin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\messages.g.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\string_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\include\file_selector_windows\file_selector_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\file_dialog_controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\file_selector_plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\messages.g.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\string_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Downlord\Coding\GitHub\Serverless-Review-Application-Team-Project\front\windows\flutter\ephemeral\.plugin_symlinks\file_selector_windows\windows\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A0DE5369-6C0B-3408-9B2E-80D351C04E02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CFF960C0-CD84-3EEC-8A84-4423DC3B0682}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
