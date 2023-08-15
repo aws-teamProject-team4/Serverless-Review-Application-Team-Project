@@ -69,7 +69,7 @@ class _WriteState extends State<Write> {
     print(_selectedFiles);
   }
 
-  Future<void> _uploadImagesToServer({
+  Future _uploadImagesToServer({
     required List<XFile> selectedFiles,
   }) async {
     final uri = Uri.parse(
@@ -78,6 +78,15 @@ class _WriteState extends State<Write> {
 
     // Content-Type 헤더 설정
     request.headers['Content-Type'] = 'multipart/form-data';
+
+    // JSON 데이터를 Map으로 구성하여 추가
+    Map<String, String> jsonMap = {
+      'userId': 'rkskek12',
+    };
+    String jsonData = jsonEncode(jsonMap);
+    request.fields['jsonData'] = jsonData;
+
+    print("Sent JSON Data: $jsonData");
 
     for (var selectedFile in selectedFiles) {
       // 확장자 추출
@@ -90,31 +99,31 @@ class _WriteState extends State<Write> {
       request.files.add(
         http.MultipartFile(
           'filename', // form field 이름
-          http.ByteStream.fromBytes(utf8.encode(base64Image)),
-          utf8.encode(base64Image).length,
+          http.ByteStream.fromBytes(
+              utf8.encode(base64Image)), // 이미지 데이터를 바이트 스트림으로 전환
+          utf8.encode(base64Image).length, // Base64로 인코딩된 데이터의 바이트 길이
           filename:
-              'image_${selectedFiles.indexOf(selectedFile) + 1}.$extension',
-          contentType: MediaType('image', extension),
+              'image_${selectedFiles.indexOf(selectedFile) + 1}.$extension', // 확장자 포함한 파일명
+          contentType: MediaType('image', extension), // 컨텐츠 타입 설정
         ),
       );
     }
 
-    // JSON 데이터를 파트로 추가
-    request.fields['jsonData'] = jsonEncode({
-      'userId': 'rkskek12',
-    });
-
-    // Store the request body before finalizing
-    // final requestBody = await request.finalize().toBytes();
-
-    // // Print the request headers and body data
-    // print('Request Headers: ${request.headers}');
-    // print('Request Body: ${utf8.decode(requestBody)}');
+    print("Sent Multipart Files:");
+    for (var file in request.files) {
+      print(file.filename);
+    }
 
     try {
       http.StreamedResponse response = await request.send();
       if (response.statusCode == 200) {
-        print(await response.stream.bytesToString());
+        final responseBody = await response.stream.bytesToString();
+        final responseJson = jsonDecode(responseBody);
+        print(responseJson);
+        List<String> imageUrls =
+            List<String>.from(jsonDecode(responseJson['body']));
+        print(imageUrls);
+        return imageUrls; // 이미지 URL 목록
       } else {
         print(request.headers);
         print(response.reasonPhrase);
