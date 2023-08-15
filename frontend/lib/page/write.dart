@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:http_parser/http_parser.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
@@ -75,115 +76,54 @@ class _WriteState extends State<Write> {
         'https://hu7ixbp145.execute-api.ap-northeast-2.amazonaws.com/SendImage-test/images');
     final request = http.MultipartRequest('POST', uri);
 
-    // API 키 추가
-    request.headers['x-api-key'] = 'EgHMxqZNlk2C89mFBqv4d6OgrECiOmuD3wSPiMSl';
-
-    // JSON 데이터 추가
-    Map<String, dynamic> jsonData = {
-      // 추가할 JSON 데이터 내용
-      "Method": "sendImagesToS3",
-      "userId": "rkskek12",
-    };
-    request.fields['data'] = jsonEncode(jsonData); // JSON 데이터를 'data' 키로 전송
-
-    print("Sent JSON Data:");
-    print(jsonData); // 보내는 JSON 데이터 출력
+    // Content-Type 헤더 설정
+    request.headers['Content-Type'] = 'multipart/form-data';
 
     for (var selectedFile in selectedFiles) {
+      // 확장자 추출
+      String extension = selectedFile.path.split('.').last;
+
+      // 이미지 데이터를 Base64로 인코딩
+      List<int> imageBytes = await selectedFile.readAsBytes();
+      String base64Image = base64Encode(imageBytes);
+
       request.files.add(
-        await http.MultipartFile.fromPath('filename', selectedFile.path),
+        http.MultipartFile(
+          'filename', // form field 이름
+          http.ByteStream.fromBytes(utf8.encode(base64Image)),
+          utf8.encode(base64Image).length,
+          filename:
+              'image_${selectedFiles.indexOf(selectedFile) + 1}.$extension',
+          contentType: MediaType('image', extension),
+        ),
       );
     }
 
-    print("Sent Multipart Files:");
-    for (var file in request.files) {
-      print(file.filename);
-    }
+    // JSON 데이터를 파트로 추가
+    request.fields['jsonData'] = jsonEncode({
+      'userId': 'rkskek12',
+    });
+
+    // Store the request body before finalizing
+    // final requestBody = await request.finalize().toBytes();
+
+    // // Print the request headers and body data
+    // print('Request Headers: ${request.headers}');
+    // print('Request Body: ${utf8.decode(requestBody)}');
 
     try {
-      final response = await request.send();
+      http.StreamedResponse response = await request.send();
       if (response.statusCode == 200) {
-        print("Success");
-        print(response.statusCode);
-
-        final responseBody = await response.stream.bytesToString();
-        print("Response Data:");
-        print(responseBody); // Lambda 함수의 응답 데이터 출력
+        print(await response.stream.bytesToString());
       } else {
-        print("Fail");
-        final responseBody = await response.stream.bytesToString();
-        print("Response Data:");
-        print(responseBody); // Lambda 함수의 응답 데이터 출력
-        print(response.statusCode);
-        // throw Exception('Failed to send images');
+        print(request.headers);
+        print(response.reasonPhrase);
       }
     } catch (e) {
       print(e);
       // throw Exception('Failed to send images');
     }
   }
-
-//   Future<void> uploadImagesToServer({
-//   required List<XFile> selectedFiles,
-//   required String userId,
-//   required String imageDescription,
-// }) async {
-//   final uri = Uri.parse('https://651n535yzg.execute-api.ap-northeast-2.amazonaws.com/post');
-
-//   final request = http.MultipartRequest('POST', uri);
-
-//   // JSON 데이터 추가
-//   final jsonBody = jsonEncode({
-//     "Method": "sendImagesToS3",
-//     "userId": userId,
-//     "imageDescription": imageDescription,
-//   });
-//   request.fields['jsonData'] = jsonBody;
-
-//   // 이미지 파일 추가
-//   for (var selectedFile in selectedFiles) {
-//     final file = await http.MultipartFile.fromPath('imageFiles', selectedFile.path);
-//     request.files.add(file);
-//   }
-
-//   final response = await request.send();
-//   if (response.statusCode == 200) {
-//     // Lambda 함수에서 올바른 응답을 받은 경우
-//     final responseData = await response.stream.bytesToString();
-//     print('Response Data: $responseData');
-//   } else {
-//     // Lambda 함수에서 오류 응답을 받은 경우
-//     print('Error: ${response.statusCode}, ${await response.stream.bytesToString()}');
-//   }
-// }
-
-  // Future<void> _updateImageData() async {
-  //   imageJsonData = await _getImageIdData();
-  //   imageData = _convertImageJsonData(imageJsonData);
-  // }
-
-  // Future<List<dynamic>> _getImageIdData() async {
-  //   var url = Uri.parse(
-  //       'https://ubuntu.i4624.tk/image/sql/recent/${_selectedFiles.length}');
-  //   var response = await http.get(url);
-  //   if (response.statusCode == 200) {
-  //     final List<dynamic> responseData =
-  //         jsonDecode(utf8.decode(response.bodyBytes));
-  //     imageJsonData = responseData;
-  //     return imageJsonData;
-  //   } else {
-  //     throw Exception('Failed to get image data');
-  //   }
-  // }
-
-  // List<Map<String, dynamic>> _convertImageJsonData(
-  //     List<dynamic> imageJsonData) {
-  //   return imageJsonData
-  //       .map<Map<String, int>>((data) => {
-  //             'imageUid': data[0],
-  //           })
-  //       .toList();
-  // }
 
   // Send Data To Server
   Future _sendDataToServer({

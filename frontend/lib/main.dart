@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_project/page/write.dart';
+import 'package:test_project/page/control.dart';
+import 'package:test_project/page/login.dart';
 
 void main() async {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         //primaryColor: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const Write(),
+      home: const Control(),
     );
   }
 }

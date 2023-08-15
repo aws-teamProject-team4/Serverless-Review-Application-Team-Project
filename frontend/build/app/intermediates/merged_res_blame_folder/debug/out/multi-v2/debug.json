@@ -904,6 +904,25 @@
                     }
                 },
                 {
+                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\frontend\\android\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "176,832",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "483,998"
+                    },
+                    "to": {
+                        "startLines": "1454,1458",
+                        "startColumns": "4,4",
+                        "startOffsets": "94094,94275",
+                        "endLines": "1457,1460",
+                        "endColumns": "12,12",
+                        "endOffsets": "94270,94439"
+                    }
+                },
+                {
                     "source": "C:\\Users\\kirit\\.gradle\\caches\\transforms-3\\e5ecb561b33282f611e0fcda16f468e3\\transformed\\jetified-appcompat-resources-1.5.1\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,18,24,34,50",
@@ -1031,25 +1050,6 @@
                     }
                 },
                 {
-                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\front\\android\\app\\src\\main\\res\\values\\styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "176,832",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "483,998"
-                    },
-                    "to": {
-                        "startLines": "1454,1458",
-                        "startColumns": "4,4",
-                        "startOffsets": "94094,94275",
-                        "endLines": "1457,1460",
-                        "endColumns": "12,12",
-                        "endOffsets": "94270,94439"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kirit\\.gradle\\caches\\transforms-3\\dee59bb480020f42d53c2ea15e4501f7\\transformed\\jetified-window-1.0.0-beta04\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,19,23,34,51",
@@ -1086,25 +1086,6 @@
                     }
                 },
                 {
-                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\front\\build\\flutter_inappwebview\\intermediates\\packaged_res\\debug\\values\\values.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,11,14",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,102,153,210,259,306,353,426,502",
-                        "endLines": "2,3,4,5,6,7,10,13,21",
-                        "endColumns": "46,50,56,48,46,46,12,12,12",
-                        "endOffsets": "97,148,205,254,301,348,421,497,949"
-                    },
-                    "to": {
-                        "startLines": "322,323,324,325,326,357,365,1451,1791",
-                        "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "20873,20920,20971,21028,21077,24334,24947,94018,119727",
-                        "endLines": "322,323,324,325,326,357,367,1453,1798",
-                        "endColumns": "46,50,56,48,46,46,12,12,12",
-                        "endOffsets": "20915,20966,21023,21072,21119,24376,25015,94089,120174"
-                    }
-                },
-                {
                     "source": "C:\\Users\\kirit\\.gradle\\caches\\transforms-3\\25a0b970139aa02c768087660f5883a2\\transformed\\fragment-1.3.6\\res\\values\\values.xml",
                     "from": {
                         "startLines": "2,3,4,5,10",
@@ -1121,6 +1102,25 @@
                         "endLines": "258,265,288,2699,2703",
                         "endColumns": "56,64,63,24,24",
                         "endOffsets": "17106,17413,18621,155809,155958"
+                    }
+                },
+                {
+                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\frontend\\build\\flutter_inappwebview\\intermediates\\packaged_res\\debug\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,11,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,102,153,210,259,306,353,426,502",
+                        "endLines": "2,3,4,5,6,7,10,13,21",
+                        "endColumns": "46,50,56,48,46,46,12,12,12",
+                        "endOffsets": "97,148,205,254,301,348,421,497,949"
+                    },
+                    "to": {
+                        "startLines": "322,323,324,325,326,357,365,1451,1791",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "20873,20920,20971,21028,21077,24334,24947,94018,119727",
+                        "endLines": "322,323,324,325,326,357,367,1453,1798",
+                        "endColumns": "46,50,56,48,46,46,12,12,12",
+                        "endOffsets": "20915,20966,21023,21072,21119,24376,25015,94089,120174"
                     }
                 },
                 {
@@ -2651,7 +2651,24 @@
             "outputFile": "com.example.untitled.app-merged_res-33:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\front\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "C:\\Users\\kirit\\.gradle\\caches\\transforms-3\\dd7933181bcd1a44ab10530c6cc929bb\\transformed\\appcompat-1.5.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "405,475,559,643,739,841,943,1037",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "470,554,638,734,836,938,1032,1121"
+                    }
+                },
+                {
+                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\frontend\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
@@ -2667,23 +2684,6 @@
                         "endLines": "5,8",
                         "endColumns": "12,12",
                         "endOffsets": "231,400"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\kirit\\.gradle\\caches\\transforms-3\\dd7933181bcd1a44ab10530c6cc929bb\\transformed\\appcompat-1.5.1\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "9,10,11,12,13,14,15,16",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "405,475,559,643,739,841,943,1037",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "470,554,638,734,836,938,1032,1121"
                     }
                 }
             ]
