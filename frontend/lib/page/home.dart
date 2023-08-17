@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:intl/intl.dart';
 import 'package:test_project/repository/contents_repository.dart';
 
@@ -23,7 +24,7 @@ class _HomeState extends State<Home> {
 
   //앱 내에서 좌측 상단바 출력을 위한 데이터
   final Map<String, String> optionsTypeToString = {
-    "all": "모든 게시물",
+    "all": "카테고리",
     "entertainment": "게임/오락",
     "electronic": "전자기기",
     "clothes": "의류",
@@ -57,7 +58,7 @@ class _HomeState extends State<Home> {
           return [
             const PopupMenuItem(
               value: "all",
-              child: Text("모든 게시물"),
+              child: Text("모두"),
             ),
             const PopupMenuItem(
               value: "entertainment",
@@ -164,7 +165,7 @@ class _HomeState extends State<Home> {
                     errorBuilder: (BuildContext context, Object exception,
                         StackTrace? stackTrace) {
                       return Image.asset(
-                        "assets/images/No_image.jpg",
+                        "assets/svg/No_image.jpg",
                         width: 100,
                         height: 100,
                       );
@@ -176,7 +177,7 @@ class _HomeState extends State<Home> {
                       }
                       // 이미지 로딩 중에 표시할 에셋
                       return Image.asset(
-                        'assets/images/loading_placeholder.gif',
+                        'assets/svg/loading_placeholder.gif',
                         width: 100,
                         height: 100,
                         scale: 1,
@@ -214,14 +215,41 @@ class _HomeState extends State<Home> {
                         ),
                         Text(
                           datas[index]["userId"]!,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 12,
-                            color: Colors.black.withOpacity(0.3),
+                            color: Colors.black,
                           ),
                         ),
-                        const SizedBox(
-                          height: 5,
-                        ),
+                        Expanded(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(2.0),
+                                child: RatingBar.builder(
+                                  initialRating:
+                                      datas[index]['rate'].toDouble(),
+                                  minRating: 1,
+                                  direction: Axis.horizontal,
+                                  allowHalfRating: true,
+                                  ignoreGestures: true,
+                                  itemCount: 5,
+                                  itemSize: 20,
+                                  itemPadding: const EdgeInsets.symmetric(
+                                      horizontal: 1.0),
+                                  itemBuilder: (context, _) => const Icon(
+                                    Icons.star,
+                                    color: Colors.amber,
+                                  ),
+                                  onRatingUpdate: (rating) {
+                                    print(rating);
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),

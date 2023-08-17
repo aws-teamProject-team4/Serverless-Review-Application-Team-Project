@@ -136,6 +136,9 @@ class _LogInState extends State<LogIn> {
                                   );
                                   try {
                                     if (statusCode == 200) {
+                                      setState(() {
+                                        UserInfo.userId = userId.text;
+                                      });
                                       // ignore: use_build_context_synchronously
                                       Navigator.pushAndRemoveUntil(
                                           context,
@@ -157,11 +160,11 @@ class _LogInState extends State<LogIn> {
                                                 borderRadius:
                                                     BorderRadius.circular(
                                                         10.0)),
-                                            content: const Column(
+                                            content: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.center,
-                                              children: [
+                                              children: const [
                                                 Text(
                                                   "ID 또는 패스워드를 확인해주세요.",
                                                 ),
@@ -212,11 +215,11 @@ class _LogInState extends State<LogIn> {
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(10.0)),
-                                          content: const Column(
+                                          content: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.center,
-                                            children: [
+                                            children: const [
                                               Text(
                                                 "아이디나 패스워드 혹은",
                                               ),

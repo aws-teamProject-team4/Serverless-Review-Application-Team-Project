@@ -1,6 +1,6 @@
+import 'package:comment_box/comment/comment.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:test_project/page/home.dart';
 import '../repository/contents_repository.dart';
 
 class DetailContentView extends StatefulWidget {
@@ -26,6 +26,9 @@ class _DetailContentViewState extends State<DetailContentView>
 
   late String currentLocation;
 
+  final formKey = GlobalKey<FormState>();
+  final TextEditingController commentController = TextEditingController();
+
   @override
   void initState() {
     super.initState();
@@ -34,8 +37,6 @@ class _DetailContentViewState extends State<DetailContentView>
         .animate(_animationController);
     imgList = widget.data["imageList"];
     _currentPage = 0;
-    currentLocation = "setting";
-    // _loadMyFavoriteContentState();
   }
 
   Future<String?> getUserId() async {
@@ -214,46 +215,73 @@ class _DetailContentViewState extends State<DetailContentView>
             widget.data["boardCategory"],
             style: const TextStyle(fontSize: 15, height: 1.5),
           ),
-          const SizedBox(height: 15),
-          // Row(
-          //   children: [
-          //     Text(
-          //       "조회수 ∙ ${widget.data["boardHits"].toString()}",
-          //       style: const TextStyle(
-          //         fontSize: 12,
-          //         color: Colors.grey,
-          //       ),
-          //     ),
-          //   ],
-          // ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 30),
         ],
       ),
     );
   }
 
+  Widget commentChild(data) {
+    return ListView(
+      children: [
+        for (var i = 0; i < data.length; i++)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(2.0, 8.0, 2.0, 0.0),
+            child: ListTile(
+              leading: GestureDetector(
+                onTap: () async {
+                  // Display the image in large form.
+                  print("Comment Clicked");
+                },
+                child: Container(
+                  height: 50.0,
+                  width: 50.0,
+                  decoration: const BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                  child: CircleAvatar(
+                      radius: 50,
+                      backgroundImage: CommentBox.commentImageParser(
+                        imageURLorPath: ("assets/svg/user.png"),
+                      )),
+                ),
+              ),
+              title: Text(
+                data[i]['name'],
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
+              subtitle: Text(data[i]['message']),
+            ),
+          )
+      ],
+    );
+  }
+
   Widget _bodyWidget() {
-    return CustomScrollView(controller: controller, slivers: [
-      SliverList(
-        delegate: SliverChildListDelegate(
-          [
-            _imageSlider(),
-            _sellerInfo(),
-            _line(),
-            _contentDetail(),
-            _line(),
-            //_otherCellContents(),
-          ],
+    return CustomScrollView(
+      controller: controller,
+      slivers: [
+        SliverList(
+          delegate: SliverChildListDelegate(
+            [
+              _imageSlider(),
+              _sellerInfo(),
+              _line(),
+              _contentDetail(),
+              _line(),
+              //_otherCellContents(),
+            ],
+          ),
         ),
-      ),
-    ]);
+      ],
+    );
   }
 
   Widget _bottomBarWidget() {
     return Container(
       width: MediaQuery.of(context).size.width,
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      height: 55,
+      height: 60,
       child: Row(
         children: [
           Container(
@@ -263,35 +291,34 @@ class _DetailContentViewState extends State<DetailContentView>
             color: Colors.grey.withOpacity(0.3),
           ),
           Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                // PIN 입력 페이지 이동 버튼
-                Padding(
-                  padding: const EdgeInsets.all(2.0),
-                  child: GestureDetector(
-                    onTap: () async {},
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 7),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: const Color.fromARGB(255, 132, 206, 243),
-                      ),
-                      child: const Text(
-                        "PIN 설정 / 해제",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                controller: commentController,
+                decoration: InputDecoration(
+                  hintText: '댓글을 작성해주세요.',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(25.0),
                   ),
+                  contentPadding: const EdgeInsets.symmetric(
+                      horizontal: 20, vertical: 10.0), // Adjust this value
                 ),
-              ],
+              ),
             ),
-          )
+          ),
+          IconButton(
+            onPressed: () {
+              if (formKey.currentState!.validate()) {
+                print(commentController.text);
+                setState(() {});
+                commentController.clear();
+                FocusScope.of(context).unfocus();
+              } else {
+                print("Not validated");
+              }
+            },
+            icon: const Icon(Icons.send),
+          ),
         ],
       ),
     );

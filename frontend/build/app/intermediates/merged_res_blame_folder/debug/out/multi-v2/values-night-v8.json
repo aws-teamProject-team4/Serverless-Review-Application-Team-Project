@@ -4,7 +4,7 @@
             "outputFile": "com.example.untitled.app-mergeDebugResources-31:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kirit\\.gradle\\caches\\transforms-3\\dd7933181bcd1a44ab10530c6cc929bb\\transformed\\appcompat-1.5.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "/Users/alme/.gradle/caches/transforms-3/dd7933181bcd1a44ab10530c6cc929bb/transformed/appcompat-1.5.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -21,14 +21,14 @@
                     }
                 },
                 {
-                    "source": "E:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\frontend\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "/Users/alme/GitHub/Serverless-Review-Application-Team-Project/frontend/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
-                        "startOffsets": "175,831",
+                        "startOffsets": "172,817",
                         "endLines": "7,16",
                         "endColumns": "12,12",
-                        "endOffsets": "482,997"
+                        "endOffsets": "475,981"
                     },
                     "to": {
                         "startLines": "2,6",

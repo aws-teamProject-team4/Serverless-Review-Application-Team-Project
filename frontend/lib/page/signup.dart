@@ -189,8 +189,8 @@ class _SignUpState extends State<SignUp> {
       ),
       backgroundColor: Colors.white,
       elevation: 1,
-      title: const Row(
-        children: [
+      title: Row(
+        children: const [
           Expanded(
             child: Center(
               child: Text(
@@ -304,11 +304,11 @@ class _SignUpState extends State<SignUp> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.circular(10.0)),
-                                  content: const Column(
+                                  content: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "ID를 입력해주세요",
                                       ),
@@ -354,11 +354,11 @@ class _SignUpState extends State<SignUp> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.circular(10.0)),
-                                  content: const Column(
+                                  content: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "비밀번호를 입력해주세요",
                                       ),
@@ -404,11 +404,11 @@ class _SignUpState extends State<SignUp> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.circular(10.0)),
-                                  content: const Column(
+                                  content: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "재확인 비밀번호를 입력해주세요",
                                       ),
@@ -455,11 +455,11 @@ class _SignUpState extends State<SignUp> {
                                   shape: RoundedRectangleBorder(
                                       borderRadius:
                                           BorderRadius.circular(10.0)),
-                                  content: const Column(
+                                  content: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "비밀번호가 일치하지않습니다.",
                                       ),
@@ -525,11 +525,11 @@ class _SignUpState extends State<SignUp> {
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(10.0)),
-                                    content: const Column(
+                                    content: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
-                                      children: [
+                                      children: const [
                                         Text(
                                           "이미 등록된 아이디입니다.",
                                         ),
@@ -577,11 +577,11 @@ class _SignUpState extends State<SignUp> {
                                     shape: RoundedRectangleBorder(
                                         borderRadius:
                                             BorderRadius.circular(10.0)),
-                                    content: const Column(
+                                    content: Column(
                                       mainAxisSize: MainAxisSize.min,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
-                                      children: [
+                                      children: const [
                                         Text(
                                           "서버와의 통신이 원활하지않습니다.",
                                         ),
