@@ -1,4 +1,4 @@
-#Mon Aug 07 20:15:31 KST 2023
-base.0=E\:\\Downlord\\Coding\\GitHub\\Serverless-Review-Application-Team-Project\\front\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Thu Aug 17 12:41:07 KST 2023
+base.0=/Users/alme/GitHub/Serverless-Review-Application-Team-Project/frontend/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
