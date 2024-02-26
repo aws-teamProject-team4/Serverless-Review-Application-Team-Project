@@ -78,8 +78,7 @@ class _WriteState extends State<Write> {
   Future _uploadImagesToServer({
     required List<XFile> selectedFiles,
   }) async {
-    final uri = Uri.parse(
-        'https://hu7ixbp145.execute-api.ap-northeast-2.amazonaws.com/SendImage-test/images');
+    final uri = Uri.parse("");
     final request = http.MultipartRequest('POST', uri);
 
     // Content-Type 헤더 설정
